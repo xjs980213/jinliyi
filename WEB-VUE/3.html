@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="flag" />
+		<div id="app">
+			<!--if是对DOM进行删除添加操作-->
+			<div v-if="flag">hello world v-if</div>
+			<!--show是对style样式的display进行修改-->
+			<div v-show="flag">hello world v-show</div>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					flag:true
+				}
+			})
+			
+			btn.onclick = function(){
+				vm.flag = !vm.flag;
+			}
+		</script>
+	</body>
+</html>

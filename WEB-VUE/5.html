@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<!--列表渲染-->
+				<li v-for="f in foods">
+					<h3 v-text="f.name"></h3>
+					<span v-text="f.price"></span>
+				</li>
+			</ul>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			new Vue({
+				el:"#app",
+				data:{
+					foods:[{
+						name:"苹果",
+						price:"2.00"
+					},{
+						name:"梨子",
+						price:"2.00"
+					},{
+						name:"西瓜",
+						price:"5.00"
+					}]
+				}
+			})
+		</script>
+	</body>
+</html>

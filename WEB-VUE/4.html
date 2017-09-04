@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" id="btn" value="flag" />
+		<div id="app">
+			<div v-text="exp"></div>
+			<div v-if="exp < 100">普通会员</div>
+			<div v-else-if="exp < 1000">黄金会员</div>
+			<div v-else-if="exp < 5000">白金会员</div>
+			<div v-else>钻石会员</div>
+		</div>
+		<script src="js/vue.js"></script>
+		<script>
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					exp:99
+				}
+			})
+			
+			btn.onclick = function(){
+				vm.exp += 1000;
+			}
+		</script>
+	</body>
+</html>

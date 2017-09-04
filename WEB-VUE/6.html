@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				background-color: lightgoldenrodyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div v-text="msg" v-on:mouseenter="msg='hello world'"></div>
+			<input type="button" value="修改vue的数据" v-on:click="msg='你好'"/>
+		</div>
+		
+		<script src="js/vue.js"></script>
+		<script>
+			//实例化vue对象
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					msg:"hello vue.js"
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>

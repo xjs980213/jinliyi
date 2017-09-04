@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<div v-text="msg"></div>
+		</div>
+		
+		<input type="button" id="btn" value="修改vue的数据" />
+		<script src="js/vue.js"></script>
+		<script>
+			//实例化vue对象
+			var vm = new Vue({
+				el:"#app",
+				data:{
+					msg:"hello vue.js"
+				}
+			})
+			
+			btn.onclick = function(){
+				//外部通过vm实例化对象对vue内部数据进行修改，
+				//不需vm.data直接vm.要修改的属性
+				vm.msg = "你好 vue 2";
+			}
+		</script>
+	</body>
+</html>

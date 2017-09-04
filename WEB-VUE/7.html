@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+		<div v-text="getTime()"></div>
+		<input type="button" value="修改vue的数据" v-on:click="change('hello world')"/>
+		<div v-text="msg"></div>
+		<ul>
+				<!--列表渲染-->
+		<li v-for="(f,index) in foods">
+			<span v-text="f.name"></span>
+			<span v-text="f.price"></span>
+			<span @click="removeItem(index)">删除</span>
+		</li>
+		</ul>
+		</div>
+		
+		<script src="js/vue.js"></script>
+		<script src="js/7.js"> </script>
+	</body>
+</html>

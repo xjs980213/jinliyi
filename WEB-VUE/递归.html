@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		//递归....函数或者方法调用自身
+		//循环点。。。结束点。。。
+		//1、1、2、3、5、8、13、21、34、55、89……
+		<script>
+			function foo(){
+				alert(1);
+//				foo();
+			}
+			
+			foo();
+		</script>
+		
+		<script>
+			function fob(index){
+				if(index <= 0){
+					return 0;//提高程序的健壮性
+				}
+				//结束点
+				if(index === 1|| index === 2){
+					return 1;
+				}
+				//循环点
+				return fob(index-1) + fob(index-2);
+			}
+			
+			
+		</script>
+		<script>
+			function foo(num){
+				/*if(num % 2 === 1){//处理奇数状态
+					num -= 1;
+				}*/
+				num -= num % 2;
+				//结束点
+				if(num === 2){
+					return 2;
+				}
+				//循环点
+				return num + foo(num - 2);
+				
+			}
+			
+		</script>
+		<script>
+			假设上楼梯你有两种方式,一种是一次一级,一种是一次两级
+			所以 只有1级的楼梯你有 1种上法
+			2级的楼梯 有 2 种上法
+			3级的楼梯你可以 1 1 1 , 1 2 , 2 1
+			
+			
+			求10级有多少种
+			
+		</script>
+	</body>
+</html>
